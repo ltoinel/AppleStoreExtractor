@@ -8,9 +8,9 @@
 $limit = 200;
 
 // City parameter check
-$city = $_GET['city'];
+$city = $_GET['search'];
 if (!isset($city)){
-        echo "missing city parameter";
+        echo "missing search parameter";
         exit();
 }
 
