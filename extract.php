@@ -34,7 +34,7 @@ $id = 0;
 while ($offset == 0 || (isset($data) && $data->resultCount == $limit)){
 
         // Calling the apple Webservice
-    $json = file_get_contents('https://itunes.apple.com/search?term='.$city.'&country=fr&entity=software&limit='.$limit.'&offset='.$offset);
+    $json = file_get_contents('https://itunes.apple.com/search?term='.$search.'&country=fr&entity=software&limit='.$limit.'&offset='.$offset);
         $data = json_decode($json);
 
         // Generate the CSV line
