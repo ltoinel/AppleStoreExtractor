@@ -9,7 +9,7 @@ $limit = 200;
 
 // City parameter check
 $city = $_GET['search'];
-if (!isset($city)){
+if (!isset($search)){
         echo "missing search parameter";
         exit();
 }
@@ -46,5 +46,5 @@ while ($offset == 0 || (isset($data) && $data->resultCount == $limit)){
         echo addslashes($app->sellerName)."\n";
     }
 
-    $offset += 200;
+    $offset += $limit;
 }
